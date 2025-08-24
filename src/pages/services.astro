@@ -1,0 +1,319 @@
+---
+import Layout from "../layouts/Layout.astro";
+import {
+  Network,
+  Shield,
+  Wrench,
+  Cloud,
+  CheckCircle,
+  ArrowRight,
+  CodeSquare,
+ClipboardCheck,
+Lightbulb,
+} from "lucide-react";
+
+import DecryptedText from "@/components/react/UI/Text/DecryptedText";
+import LightCommunicationBackground from "@/components/react/UI/Animation/LightCommunicationBackground";
+import ScrollReveal from "@/components/react/UI/Animation/ScrollReveal";
+import GlowButton from "@/components/react/UI/components/GlowButton";
+import TransitionSVGSection from "@/components/react/UI/components/TransitionSVGSection";
+
+import ImgCpInt from "/image/services/Gemini_Generated_Image_pqpdlfpqpdlfpqpd.png?url";
+import ImgAuditSecurity from "/image/services/Gemini_Generated_Image_axxjxoaxxjxoaxxj.webp?url";
+import ImgMainTISupportIT from "/image/services/Gemini_Generated_Image_1zrni41zrni41zrn.webp?url";
+import ImgVitualServices from "/image/services/Gemini_Generated_Image_pkncnpkncnpkncnp.webp?url";
+import ImgDevServices from "/image/services/Gemini_Generated_Image_gxayblgxayblgxay.webp?url";
+import { BackgroundBeams } from "@/components/uiAceternity/UI/Background/BackgroundBeams";
+import ImgEtudeIngenierie from "/image/services/Gemini_Generated_Image_digg48digg48digg.webp?url";
+import ImgGestionProjets from "/image/services/Gemini_Generated_Image_y5vgcmy5vgcmy5vg.webp?url";
+
+import TitleDescript from "@/components/react/UI/components/TitleDescript";
+import {ServicesComplementaire} from "@/components/uiAceternity/UI/componentlist";
+import { motion } from "framer-motion";
+
+const services = [
+  {
+    img: ImgCpInt,
+    icon: Network,
+    title: "Conception & Installation de Réseaux",
+    description:
+      "Mise en place de réseaux LAN, WAN et Wi-Fi adaptés à votre activité",
+    features: [
+      "Étude et conception sur mesure",
+      "Câblage structuré professionnel",
+      "Configuration des équipements réseau",
+      "Documentation technique complète",
+      "Formation de vos équipes",
+      "Garantie sur matériel et installation",
+    ],
+    color: "from-blue-500 to-blue-600",
+  },
+  {
+    img: ImgAuditSecurity,
+    icon: Shield,
+    title: "Audit et Sécurité des Réseaux",
+    description:
+      "Analyse de l'existant, détection de vulnérabilités et recommandations",
+    features: [
+      "Audit complet de sécurité",
+      "Test de pénétration",
+      "Mise en conformité RGPD",
+      "Surveillance en temps réel",
+      "Plan de reprise d'activité",
+      "Formation sensibilisation cyber",
+    ],
+    color: "from-green-500 to-green-600",
+  },
+  {
+    img: ImgMainTISupportIT,
+    icon: Wrench,
+    title: "Maintenance & Support Technique",
+    description:
+      "Interventions préventives et curatives avec garantie de réactivité",
+    features: [
+      "Support technique 24/7",
+      "Maintenance préventive",
+      "Interventions sur site",
+      "Assistance à distance",
+      "Contrats SLA personnalisés",
+      "Monitoring proactif",
+    ],
+    color: "from-orange-500 to-orange-600",
+  },
+  {
+    img: ImgVitualServices,
+    icon: Cloud,
+    title: "Virtualisation & Infrastructure Cloud",
+    description:
+      "Optimisez vos ressources IT avec des solutions cloud fiables et sécurisées",
+    features: [
+      "Migration vers le cloud",
+      "Virtualisation serveurs",
+      "Solutions hybrides",
+      "Sauvegarde automatisée",
+      "Haute disponibilité",
+      "Optimisation des coûts",
+    ],
+    color: "from-purple-500 to-purple-600",
+  },
+  {
+    img: ImgDevServices,
+    icon: CodeSquare,
+    title: "Analyse des Besoins et Conception",
+    description:
+      "Nous transformons vos idées en solutions logicielles performantes, sécurisées et évolutives.",
+    features: [
+      "Recueil des Exigences",
+      "Développement",
+      "Qualité et Sécurité",
+      "Déploiement et Maintenance",
+      "Formation et Documentation",
+    ],
+    color: "from-green-500 to-blue-700",
+  },{
+    img: ImgGestionProjets, // Remplace par l'image correspondante
+  icon: ClipboardCheck,   // Une icône adaptée à la gestion de projets
+  title: "Gestion de projets IT",
+  description:
+    "Pilotage complet de vos projets IT pour garantir qualité, délais et satisfaction",
+  features: [
+    "Planification et organisation des projets",
+    "Gestion des ressources et budgets",
+    "Suivi de l’avancement et reporting",
+    "Coordination des équipes techniques",
+    "Analyse des risques et mitigation",
+    "Accompagnement jusqu’à la livraison",
+  ],
+  color: "from-red-500 to-red-600", // Couleur dynamique et professionnelle
+  },
+  {
+  img: ImgEtudeIngenierie, // Remplace par l'image correspondante
+  icon: Lightbulb,         // Choisis une icône inspirante, par ex. Lightbulb pour innovation/ingénierie
+  title: "Étude & Ingénierie",
+  description:
+    "Accompagnement stratégique pour transformer vos besoins en solutions IT concrètes et innovantes",
+  features: [
+    "Analyse approfondie des besoins",
+    "Étude de faisabilité technique",
+    "Architecture et conception sur mesure",
+    "Optimisation des processus",
+    "Prototypage et validation",
+    "Support au déploiement et transfert de compétences",
+  ],
+  color: "from-indigo-500 to-indigo-600", // Couleur inspirante et professionnelle
+}
+];
+---
+
+<Layout title="KDN | Service">
+  <div class="box-content">
+    <!-- Hero Section  -->
+    <LightCommunicationBackground
+      className="absolute inset-0 -z-10 w-full"
+      client:load
+    >
+      <section
+        class="relative flex itmes-center justify-center bg-gradient-to-br backdrop-blur-xs from-transparent via-black/50 to-it4a-primary/50 py-10 pt-20 lg:py-32 text-sm md:text-lg"
+      >
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div class="text-center ">
+             <motion.h1
+                    className="text-3xl md:text-5xl pt-20 md:pt-40 lg:text-5xl font-bold text-gray-100 mb-6"
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8 }}
+        
+                  client:only>
+              <DecryptedText
+                speed={20}
+                animateOn="view"
+                text="Nos Services"
+                client:load
+              />
+              <span
+                class="block font-bold text-transparent bg-clip-text bg-gradient-to-r from-it4a-primary to-it4a-secondary text-xs md:text-3xl"
+              >
+                <DecryptedText
+                  animateOn="view"
+                  speed={10}
+                  text="IT Experts"
+                  client:load
+                />
+              </span>
+            </motion.h1>
+            <motion.p
+                    className="text-xs md:text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed"
+                    initial={{ opacity: 0, y: -20 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, delay: 0.2 }}
+                    client:only
+            >
+              <DecryptedText
+                speed={100} useOriginalCharsOnly={true}    animateOn='view' 
+                text="Des solutions complètes pour transformer et optimiser votre infrastructure informatique"
+                client:load
+              />
+            </motion.p>
+          </div>
+        </div>
+      </section>
+    </LightCommunicationBackground>
+
+    <!-- Main Services  -->
+    
+    <section class="py-20 backdrop-blur-xs bg-gray-60/50 relative">
+      <TransitionSVGSection />
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+        <div class=" space-y-10 md:space-y-20">
+          {
+            services.map((service, index) => (
+              <ScrollReveal
+                direction={index % 2 === 1 ? "right" : "left"}
+                client:load
+              >
+                <div
+                  class={`grid lg:grid-cols-2 gap-10  items-center ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}
+                >
+                  <div class={index % 2 === 1 ? "lg:col-start-2" : ""}>
+                    <div class="bg-gray-700/20 border-1 border-gray-50/20 shadow-2xl rounded-3xl p-8 backdrop-blur-md">
+                      <div class="flex items-center gap-10 mb-4 font-bold text-transparent bg-clip-text bg-gradient-to-r from-it4a-primary to-it4a-secondary">
+                        <div
+                          class={` rounded-full flex items-center justify-center text-it4a-primary `}
+                        >
+                          <service.icon className="w-6 h-6" />
+                        </div>
+                        <div class="text-2xl lg:text-3xl">
+                          <DecryptedText
+                            text={service.title}
+                            speed={100} useOriginalCharsOnly={true}   animateOn='view' 
+                          />
+                        </div>
+                      </div>
+                      <p class="text-lg text-gray-200 leading-relaxed">
+                        {service.description}
+                      </p>
+                      <div >
+                        {service.features.map((feature) => (
+                          <ScrollReveal  client:load>
+                            <div class="flex text-it4a-primary items-center space-y-3 space-x-3">
+                              <CheckCircle className="h-5 w-5 " />
+                              <span class="text-gray-100">{feature}</span>
+                            </div>
+                          </ScrollReveal>
+                        ))}
+                      </div>
+                    </div>
+                  </div>
+                  <div class={index % 2 === 1 ? "lg:col-start-1" : ""}>
+                    <div class="relative">
+                      <div
+                        class={`absolute inset-0 bg-gradient-to-r ${service.color} rounded-3xl transform ${index % 2 === 0 ? "rotate-6" : "-rotate-6"}`}
+                      />
+                      <img
+                        src={service.img}
+                        alt={service.title}
+                        class="relative rounded-3xl shadow-2xl w-full h-50 md:h-80 object-cover"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </ScrollReveal>
+            ))
+          }
+        </div>
+      </div>
+    </section>
+
+    <!-- Additional Services  -->
+    <section class="py-20 relative">
+      <BackgroundBeams
+        className="h-full -z-20  bg-gradient-to-tr from-it4a-secondary to-black text-it4a-primary"
+        client:only
+      />
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+          <TitleDescript
+            title="Services"
+            title2="complémentaires"
+            descript=" Une gamme étendue de services pour répondre à tous vos besoins IT"
+            client:load
+          />
+        </div>
+    <ScrollReveal client:only>
+        <div class="flex ">
+            <ServicesComplementaire className="flex w-full" client:load/>
+        </div>
+        </ScrollReveal>
+      </div>
+    </section>
+    <!-- CTA Section  -->
+    <LightCommunicationBackground className="z-0" client:load>
+      <section
+        class="py-20 backdrop-blur-xs bg-gradient-to-r from-it4a-primary/50 via-it4a-secondary/90 to-it4a-secondary"
+      >
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col gap-5 ">
+          <TitleDescript title="Besoin d'une solution IT?" title2="solution IT?" descript="NOs Experts analysent vos besions et vours proposent la solution la plus adaptée à votre activité et votre budget." client:load/>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <GlowButton
+              href="/contact"
+              className="text-center text-white"
+              variant="outline"
+            >
+              Contactez Nous
+              <ArrowRight />
+            </GlowButton>
+            <GlowButton
+              href="/about"
+              className=" text-center text-white"
+              variant="primary"
+            >
+              En Savoir Plus
+            </GlowButton>
+          </div>
+        </div>
+      </section>
+    </LightCommunicationBackground>
+  </div>
+</Layout>
+
+

@@ -1,0 +1,18 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Services from '@/components/react/sections/Services';
+import SectionAbout from '@/components/react/sections/SectionAbout';
+import Hero from '@/components/react/sections/Hero';
+import CtaSection from '@/components/react/sections/CtaSection';
+import SectorsActiviter from '@/components/react/sections/SectorsActiviter';
+import SectionPartner from '@/components/react/sections/SectionPartner';
+---
+
+<Layout title="KDN | Home">
+    <Hero client:load/>
+    <Services client:load/>
+    <SectorsActiviter client:load/>
+    <SectionAbout client:only/>
+    <CtaSection  client:only/>
+    <SectionPartner client:only/>
+</Layout>

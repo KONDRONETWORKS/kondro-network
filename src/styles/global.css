@@ -1,0 +1,206 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+/* 
+  ---break--- */
+@custom-variant dark (&:is(.dark *));
+
+:root {
+  --it4a-primary: #5dbbe9;
+  --it4a-secondary: #386bb2;
+  --it4a-accent: #168140;
+  --it4a-orange: #ed7b23;
+
+  --background: oklch(1 0 0);
+  --foreground: oklch(0.129 0.042 264.695);
+  --primary: oklch(0.208 0.042 265.755);
+  --primary-foreground: oklch(0.984 0.003 247.858);
+  --secondary: oklch(0.968 0.007 247.896);
+  --secondary-foreground: oklch(0.208 0.042 265.755);
+  --accent-foreground: oklch(0.208 0.042 265.755);
+  --border: oklch(0.929 0.013 255.508);
+
+  --shadow-2xs: 0px 1px 2px 2px white;
+  --shadow-xs: 0px 2px 1px 2px white;
+  --shadow-sm: 0px 2px 0px 2px white, 2px 0px 2px -1px white;
+  --shadow: 0px 2px 0px 2px white, 3px 3px 1px -1px white;
+  --shadow-md: 2px 0px 0px 2px white, 2px 0px 4px -1px white;
+  --shadow-lg: 2px 0px 0px 2px white, 2px 0px 6px -1px white;
+  --shadow-xl: 2px 0px 0px 2px white, 2px 0px 10px -1px white;
+  --shadow-2xl: 2px 0px 0px 2px hsl(0 0% 0% / 250.00);
+  --tracking-normal: 0.025em;
+  --spacing: 0.25rem;
+
+  --text-it4africa-h1:48px;
+  --text-it4africa-h2:32px;
+  --text-it4africa-h3:24px;
+  --text-it4africa-p:16px;
+  --text-it4africa-lt:14px;
+  --text-it4africa-bnt:12px;
+
+  --font-Poppins: "Poppins", sans-serif;
+  --font-Helvetica: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --radius: 0.625rem;
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.129 0.042 264.695);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.129 0.042 264.695);
+  --muted: oklch(0.968 0.007 247.896);
+  --muted-foreground: oklch(0.554 0.046 257.417);
+  --accent: oklch(0.968 0.007 247.896);
+  --destructive: oklch(0.577 0.245 27.325);
+  --input: oklch(0.929 0.013 255.508);
+  --ring: oklch(0.704 0.04 256.788);
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(0.984 0.003 247.858);
+  --sidebar-foreground: oklch(0.129 0.042 264.695);
+  --sidebar-primary: oklch(0.208 0.042 265.755);
+  --sidebar-primary-foreground: oklch(0.984 0.003 247.858);
+  --sidebar-accent: oklch(0.968 0.007 247.896);
+  --sidebar-accent-foreground: oklch(0.208 0.042 265.755);
+  --sidebar-border: oklch(0.929 0.013 255.508);
+  --sidebar-ring: oklch(0.704 0.04 256.788);
+}
+
+@theme  {
+  --color-it4a-primary:var(--it4a-primary);
+  --color-it4a-secondary:var(--it4a-secondary);
+  --color-it4a-accent:var(--it4a-accent);
+  --color-it4a-secondary:var(--it4a-secondary);
+  --blur-xs: 2px;
+  --blur-sm: 4px;
+  --blur-md: 6px;
+  --blur-lg: 8px;
+  --blur-xl: 12px;
+  --blur-2xl: 16px;
+
+  --font-Poppins: var(--font-Poppins);
+  --font-Helvetica: var(--font-Helvetica);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-border: var(--border);
+
+  --rounded-radius-sm: calc(var(--radius) - 4px);
+  --rounded-radius-md: calc(var(--radius) - 2px);
+  --rounded-radius-lg: var(--radius);
+  --rounded-radius-xl: calc(var(--radius) + 4px);
+
+  --text-it4africa-h1:var(--text-it4africa-h1);
+  --text-it4africa-h2:var(--text-it4africa-h2);
+  --text-it4africa-h3:var(--text-it4africa-h3);
+  --text-it4africa-p:var(--text-it4africa-p);
+  --text-it4africa-lt:var(--text-it4africa-lt);
+  --text-it4africa-bnt:var(--text-it4africa-bnt);
+
+}
+font-face {
+  font-family: "Poppins";
+  src: url("../Fonts/Poppins-Thin.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+body {
+  letter-spacing: var(--tracking-normal);
+ 
+}
+
+/* 
+  ---break--- */
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  --animate-marquee: marquee var(--duration) infinite linear;
+  --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+
+  --animate-wrenchSpin: wrenchSpin 2s infinite ease-in-out; 
+
+  @keyframes marquee {
+  from {
+    transform: translateX(0);
+    }
+  to {
+    transform: translateX(calc(-100% - var(--gap)));
+    }
+  }
+  @keyframes marquee-vertical {
+  from {
+    transform: translateY(0);
+    }
+  to {
+    transform: translateY(calc(-100% - var(--gap)));
+    }
+  }
+
+    
+  @keyframes wrenchSpin {
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(15deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-15deg); }
+    100% { transform: rotate(0deg); }
+  }
+
+}
+
+
+
+
+/* 
+  ---break--- */
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+  .wrench-icon{
+    @apply origin-center animate-wrenchSpin;
+  }
+}
