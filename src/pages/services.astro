@@ -1,15 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import {
-  Network,
+  
   Shield,
-  Wrench,
+
   Cloud,
   CheckCircle,
   ArrowRight,
-  CodeSquare,
+
 ClipboardCheck,
-Lightbulb,
+Settings,
+Search,
+Users,
+BookOpen,
+Code,
 } from "lucide-react";
 
 import DecryptedText from "@/components/react/UI/Text/DecryptedText";
@@ -17,131 +21,136 @@ import LightCommunicationBackground from "@/components/react/UI/Animation/LightC
 import ScrollReveal from "@/components/react/UI/Animation/ScrollReveal";
 import GlowButton from "@/components/react/UI/components/GlowButton";
 import TransitionSVGSection from "@/components/react/UI/components/TransitionSVGSection";
-
-import ImgCpInt from "/image/services/Gemini_Generated_Image_pqpdlfpqpdlfpqpd.png?url";
+import ImgCpInt from "/image/services/Gemini_Generated_Image_pqpdlfpqpdlfpqpd.webp?url";
 import ImgAuditSecurity from "/image/services/Gemini_Generated_Image_axxjxoaxxjxoaxxj.webp?url";
 import ImgMainTISupportIT from "/image/services/Gemini_Generated_Image_1zrni41zrni41zrn.webp?url";
 import ImgVitualServices from "/image/services/Gemini_Generated_Image_pkncnpkncnpkncnp.webp?url";
+import ImgFormaServices from "/image/services/Gemini_Generated_Image_h42iv6h42iv6h42i.webp?url";
 import ImgDevServices from "/image/services/Gemini_Generated_Image_gxayblgxayblgxay.webp?url";
-import { BackgroundBeams } from "@/components/uiAceternity/UI/Background/BackgroundBeams";
 import ImgEtudeIngenierie from "/image/services/Gemini_Generated_Image_digg48digg48digg.webp?url";
 import ImgGestionProjets from "/image/services/Gemini_Generated_Image_y5vgcmy5vgcmy5vg.webp?url";
-
 import TitleDescript from "@/components/react/UI/components/TitleDescript";
+import { BackgroundBeams } from "@/components/uiAceternity/UI/Background/BackgroundBeams";
 import {ServicesComplementaire} from "@/components/uiAceternity/UI/componentlist";
 import { motion } from "framer-motion";
 
-const services = [
+const  services = [
   {
     img: ImgCpInt,
-    icon: Network,
-    title: "Conception & Installation de Réseaux",
-    description:
-      "Mise en place de réseaux LAN, WAN et Wi-Fi adaptés à votre activité",
+    icon: Settings,
+    title: "Ingénierie / Design",
+    description: "Nous concevons des architectures réseau et IT adaptées à vos besoins métiers, alliant performance, sécurité et évolutivité.",
     features: [
-      "Étude et conception sur mesure",
-      "Câblage structuré professionnel",
-      "Configuration des équipements réseau",
-      "Documentation technique complète",
-      "Formation de vos équipes",
-      "Garantie sur matériel et installation",
+      "Études d’architecture HLD (High Level Design) et LLD (Low Level Design)",
+      "Schémas de topologie réseau (LAN, WAN, Datacenter, Cloud, SD-WAN)",
+      "Dimensionnement des infrastructures (serveurs, stockage, virtualisation)",
+      "Intégration des contraintes de cybersécurité (segmentation, firewalling, zero trust)",
+      "Conception de plans de continuité et de reprise d’activité (PCA/PRA)",
     ],
     color: "from-blue-500 to-blue-600",
   },
   {
     img: ImgAuditSecurity,
     icon: Shield,
-    title: "Audit et Sécurité des Réseaux",
-    description:
-      "Analyse de l'existant, détection de vulnérabilités et recommandations",
+    title: "Implémentation",
+    description: "Nous assurons le déploiement et l’intégration de solutions technologiques avec des standards de qualité élevés.",
     features: [
-      "Audit complet de sécurité",
-      "Test de pénétration",
-      "Mise en conformité RGPD",
-      "Surveillance en temps réel",
-      "Plan de reprise d'activité",
-      "Formation sensibilisation cyber",
+      "Installation et configuration d’équipements réseau et sécurité (switches, routeurs, firewalls, WiFi, WLC)",
+      "Intégration Datacenter (serveurs, hyperviseurs, stockage SAN/NAS, HCI, OpenStack/Kubernetes)",
+      "Migration d’infrastructures (LAN, WAN, Cloud, VoIP, collaboration)",
+      "Déploiement de solutions de sécurité (antivirus, EDR, IAM, VPN, MFA)",
+      "Tests de performance, validation et mise en production",
     ],
     color: "from-green-500 to-green-600",
   },
   {
     img: ImgMainTISupportIT,
-    icon: Wrench,
-    title: "Maintenance & Support Technique",
-    description:
-      "Interventions préventives et curatives avec garantie de réactivité",
-    features: [
-      "Support technique 24/7",
-      "Maintenance préventive",
-      "Interventions sur site",
-      "Assistance à distance",
-      "Contrats SLA personnalisés",
-      "Monitoring proactif",
-    ],
-    color: "from-orange-500 to-orange-600",
-  },
-  {
-    img: ImgVitualServices,
     icon: Cloud,
-    title: "Virtualisation & Infrastructure Cloud",
-    description:
-      "Optimisez vos ressources IT avec des solutions cloud fiables et sécurisées",
+    title: "Études",
+    description: "Nous réalisons des études stratégiques et techniques pour orienter vos décisions et optimiser vos investissements.",
     features: [
-      "Migration vers le cloud",
-      "Virtualisation serveurs",
-      "Solutions hybrides",
-      "Sauvegarde automatisée",
-      "Haute disponibilité",
-      "Optimisation des coûts",
+      "Études de faisabilité (technique, économique, réglementaire)",
+      "Benchmark technologique et comparaison de solutions (Cisco, Huawei, Fortinet, etc.)",
+      "Capacity planning et anticipation de croissance",
+      "Analyse de ROI/TCO (Return on Investment / Total Cost of Ownership)",
+      "Études de migration (Cloud, IP/MPLS, SD-WAN, IPv6, etc.)",
     ],
     color: "from-purple-500 to-purple-600",
   },
   {
-    img: ImgDevServices,
-    icon: CodeSquare,
-    title: "Analyse des Besoins et Conception",
-    description:
-      "Nous transformons vos idées en solutions logicielles performantes, sécurisées et évolutives.",
+    img: ImgVitualServices,
+    icon: Search,
+    title: "Audit / AMOA",
+    description: "Nous vous accompagnons dans vos projets de transformation numérique avec un regard indépendant.",
     features: [
-      "Recueil des Exigences",
-      "Développement",
-      "Qualité et Sécurité",
-      "Déploiement et Maintenance",
-      "Formation et Documentation",
+      "Audit technique (réseau, sécurité, systèmes, cloud, applicatif)",
+      "Audit organisationnel (processus ITIL, gouvernance IT)",
+      "Rédaction de cahiers des charges et dossiers d’appel d’offres",
+      "Définition de la stratégie de sourcing (choix éditeurs/intégrateurs)",
+      "Suivi des fournisseurs et validation des livrables",
+      "Assistance aux tests d’acceptation et recette (UAT, FAT, SAT)",
     ],
-    color: "from-green-500 to-blue-700",
-  },{
-    img: ImgGestionProjets, // Remplace par l'image correspondante
-  icon: ClipboardCheck,   // Une icône adaptée à la gestion de projets
-  title: "Gestion de projets IT",
-  description:
-    "Pilotage complet de vos projets IT pour garantir qualité, délais et satisfaction",
-  features: [
-    "Planification et organisation des projets",
-    "Gestion des ressources et budgets",
-    "Suivi de l’avancement et reporting",
-    "Coordination des équipes techniques",
-    "Analyse des risques et mitigation",
-    "Accompagnement jusqu’à la livraison",
-  ],
-  color: "from-red-500 to-red-600", // Couleur dynamique et professionnelle
+    color: "from-indigo-500 to-indigo-600",
   },
   {
-  img: ImgEtudeIngenierie, // Remplace par l'image correspondante
-  icon: Lightbulb,         // Choisis une icône inspirante, par ex. Lightbulb pour innovation/ingénierie
-  title: "Étude & Ingénierie",
-  description:
-    "Accompagnement stratégique pour transformer vos besoins en solutions IT concrètes et innovantes",
-  features: [
-    "Analyse approfondie des besoins",
-    "Étude de faisabilité technique",
-    "Architecture et conception sur mesure",
-    "Optimisation des processus",
-    "Prototypage et validation",
-    "Support au déploiement et transfert de compétences",
-  ],
-  color: "from-indigo-500 to-indigo-600", // Couleur inspirante et professionnelle
-}
+    img: ImgGestionProjets,
+    icon: ClipboardCheck,
+    title: "Gestion de Projets",
+    description: "Nous pilotons vos projets IT et télécoms avec méthode et transparence.",
+    features: [
+      "Méthodologies de gestion (PMI, Prince2, Agile, Scrum)",
+      "Élaboration de planning, budgets et RACI",
+      "Gestion des risques et suivi qualité",
+      "Coordination multi-équipes (internes, partenaires, éditeurs)",
+      "Reporting exécutif et communication projet",
+      "Conduite du changement et accompagnement utilisateurs",
+    ],
+    color: "from-red-500 to-red-600",
+  },
+  {
+    img: ImgEtudeIngenierie,
+    icon: Users,
+    title: "Support et Exploitation",
+    description: "Nous assurons la disponibilité et la performance de vos systèmes 24/7.",
+    features: [
+      "Supervision proactive (NOC/SOC, monitoring 24/7, alerting)",
+      "Maintenance préventive et corrective",
+      "Gestion des incidents et des problèmes (ITIL)",
+      "Patching et mises à jour régulières",
+      "Services managés (Managed Firewall, Managed LAN, Managed Cloud)",
+      "Optimisation continue des performances (capacity management, tuning)",
+    ],
+    color: "from-orange-500 to-orange-600",
+  },
+  {
+    img: ImgFormaServices,
+    icon: BookOpen,
+    title: "Formation IT",
+    description: "Nous renforçons les compétences de vos équipes techniques et utilisateurs.",
+    features: [
+      "Formations réseaux et sécurité (Cisco CCNA/CCNP, Fortinet, Palo Alto)",
+      "Formations systèmes et cloud (Linux, Windows Server, VMware, OpenStack, AWS, Azure)",
+      "Formations DevOps et conteneurs (Docker, Kubernetes, CI/CD)",
+      "Formation cybersécurité (SOC analyst, ITIL security, bonnes pratiques utilisateurs)",
+      "Ateliers pratiques et labs personnalisés",
+    ],
+    color: "from-green-500 to-blue-700",
+  },
+  {
+    img: ImgDevServices,
+    icon: Code,
+    title: "Développement d’applications",
+    description: "Nous développons des solutions logicielles et mobiles adaptées à vos métiers.",
+    features: [
+      "Développement d’applications web et mobiles (Android/iOS)",
+      "Développement sur mesure (ERP, CRM, portail client, API)",
+      "Intégration avec les systèmes existants (bases de données, middleware, API REST/SOAP)",
+      "UX/UI design et prototypage",
+      "Tests et assurance qualité (QA, UAT, automatisation)",
+      "Maintenance évolutive et corrective des applications",
+    ],
+    color: "from-pink-500 to-pink-600",
+  },
 ];
 ---
 
@@ -292,14 +301,14 @@ const services = [
         class="py-20 backdrop-blur-xs bg-gradient-to-r from-it4a-primary/50 via-it4a-secondary/90 to-it4a-secondary"
       >
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col gap-5 ">
-          <TitleDescript title="Besoin d'une solution IT?" title2="solution IT?" descript="NOs Experts analysent vos besions et vours proposent la solution la plus adaptée à votre activité et votre budget." client:load/>
+          <TitleDescript title="Besoin d'une solution IT?" title2="solution IT?" descript="Nos Experts analysent vos besions et vour proposent la solution la plus adaptée à votre activité et votre budget." client:load/>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <GlowButton
               href="/contact"
               className="text-center text-white"
               variant="outline"
             >
-              Contactez Nous
+              Contactez nous
               <ArrowRight />
             </GlowButton>
             <GlowButton
@@ -307,7 +316,7 @@ const services = [
               className=" text-center text-white"
               variant="primary"
             >
-              En Savoir Plus
+              En savoir plus
             </GlowButton>
           </div>
         </div>

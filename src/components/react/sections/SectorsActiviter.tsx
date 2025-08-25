@@ -12,11 +12,11 @@ import { motion } from "framer-motion";
 export default function SectorActivitet(){
     const sectors: ChromaItem[] = [
     { title: "Santé", image: SanteImage },
-    { title: "Finance & Banque", image: BanckImage },
-    { title: "Télécommunications", image: NetworkImage },
+    { title: "Finance & Banque / Assurances", image: BanckImage },
+    { title: "Télécommunications & Médias", image: NetworkImage },
     { title: "Securite", image: SecurityImage },
-    { title: "E-commerce", image: EcomImage },
-    { title: "Logistique & Transport", image: LogistiqueImage }
+    { title: "Éducation & Formation", image: EcomImage },
+    { title: "Secteur Public & Administrations", image: LogistiqueImage }
   ];
     
   return(

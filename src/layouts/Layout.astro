@@ -10,7 +10,6 @@ import ScrollArrow from "@/components/react/UI/components/ScrollArrow";
 import SplashScreen from "@/components/react/UI/components/SplashScreen";
 import { ClientRouter } from "astro:transitions";
 
-
 export interface Props {
   title?: string;
   description?: string;
@@ -18,10 +17,8 @@ export interface Props {
 
 const {
   title = "KONDRO-NETWORKS",
-  description = "KONDRO NETWORKS Solutions technologiques avancées",
+  description = "Accélérez la croissance et la compétitivité de votre entreprise grâce à notre expertise.",
 } = Astro.props;
-
-
 ---
 
 <!doctype html>
@@ -36,9 +33,7 @@ const {
       name="description"
       content="Boostez la performance de votre entreprise grâce à des solutions réseau sur mesure.Nous accompagnons les PME et grandes structures dans l’installation, la gestion et la sécurisation de leurs infrastructures informatiques."
     />
-    <meta
-      property="og:image"
-      content="/sitePreview.png"/>
+    <meta property="og:image" content="/sitePreview.png" />
     <meta property="og:type" content="website" />
     <meta property="og:title" content="KONDRO-NETWORKS" />
     <link rel="sitemap" href="/sitemap-index.xml" />
@@ -87,32 +82,36 @@ const {
               href: "/services",
             },
             {
-              label: "Conseil et stratégie IT",
-              href: "/services/conseil-strategie-it",
+              label: "Ingénierie / Design",
+              href: "/services/ingenierie-design",
             },
             {
-              label: "Réseaux et cybersécurité",
-              href: "/services/reseaux-cybersecurite",
+              label: "Implémentation",
+              href: "/services/implementation",
             },
             {
-              label: "Solutions cloud et hébergement",
-              href: "/services/cloud-hebergement",
+              label: "Études",
+              href: "/services/etudes",
             },
             {
-              label: "Développement et intégration",
-              href: "/services/developpement-integration",
+              label: "Audit / AMOA",
+              href: "/services/audit-amoa",
             },
             {
-              label: "Support et maintenance IT",
-              href: "/services/support-maintenance",
-            },
-            {
-              label: "Étude & Ingénierie",
-              href: "/services/etude-ingenierie",
-            },
-            {
-              label: "Gestion de projets IT",
+              label: "Gestion de Projets",
               href: "/services/gestion-projets",
+            },
+            {
+              label: "Support et Exploitation",
+              href: "/services/support-exploitation",
+            },
+            {
+              label: "Formation IT",
+              href: "/services/formation-it",
+            },
+            {
+              label: "Développement d’applications",
+              href: "/services/developpement-applications",
             },
           ],
         },

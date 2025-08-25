@@ -80,17 +80,27 @@ const addValueCompany = [
   {
     title: "Excellence",
     description:
-      "Nous visons l'excellence dans chaque projet, avec des solutions IT de qualité supérieure.",
+      "Offrir un niveau de qualité irréprochable grâce à des ingénieurs certifiés et expérimentés (10 à 20 ans d’expérience chez des constructeurs de renommée mondiale).",
   },
   {
     title: "Innovation",
     description:
-      "Nous restons à la pointe de la technologie pour offrir les solutions les plus avancées.",
+      "Intégrer en continu les dernières technologies (cloud, cybersécurité, réseaux intelligents, applications) pour anticiper les besoins futurs.",
   },
   {
-    title: "Partenariat",
+    title: "Engagement",
     description:
-      "Nous construisons des relations durables basées sur la confiance et la transparence.",
+      "Placer la satisfaction client au centre, avec une culture de la rigueur, du respect des délais et de la performance durable.",
+  },
+  {
+    title: "Intégrité",
+    description:
+      "Agir avec transparence et fiabilité dans toutes nos collaborations.",
+  },
+  {
+    title: "Impact local",
+    description:
+      "Développer des solutions sur mesure adaptées aux réalités africaines, pour contribuer au développement économique et technologique du continent.",
   },
 ];
 ---
@@ -101,6 +111,7 @@ const addValueCompany = [
   >
     {/* Hero Section */}
     <LightCommunicationBackground
+      
       className="absolute inset-0 -z-10"
       client:load
     >
@@ -108,7 +119,7 @@ const addValueCompany = [
         class="relative bg-gradient-to-br backdrop-blur-xs from-transparent via-black/50 to-it4a-primary/50 pt-50 p-10"
       >
         <div
-          class="max-w-7xl mx-auto px-4 relative flex items-center flex-col gap-7"
+          class="w-full mx-auto px-2 md:px-4 relative flex items-center flex-col md:gap-7 gap-2 text-sm md:text-lg"
         >
           <ScrollReveal client:only>
             <div class="text-center">
@@ -122,18 +133,13 @@ const addValueCompany = [
                 <DecryptedText
                   speed={20}
                   animateOn="view"
-                  text="  À propos d'"
+                  text="À propos de"
                   client:load
                 />
                 <span
                   class="text-transparent bg-clip-text bg-gradient-to-r from-it4a-primary to-it4a-secondary"
                 >
-                  <DecryptedText
-                    animateOn="view"
-                    speed={10}
-                    text="ITExperts4Africa"
-                    client:load
-                  />
+                 KONDRO NETWORKS
                 </span>
               </motion.h1>
               <motion.p
@@ -153,7 +159,7 @@ const addValueCompany = [
               </motion.p>
             </div>
           </ScrollReveal>
-          <div class="grid lg:grid-cols-2 gap-16 items-center">
+          <div class="grid lg:grid-cols-1 gap-5 items-center">
             <ScrollReveal direction="left" client:only>
               <motion.div
                 whileHover={{ scale: 1.02 }}
@@ -169,7 +175,7 @@ const addValueCompany = [
             </ScrollReveal>
 
             <ScrollReveal direction="right" delay={0.2} client:only>
-              <div class=" flex flex-col  gap-2 text-sm">
+              <div class="flex flex-col gap-1 text-sm/20">
                 <motion.div
                   className="flex items-center space-x-3"
                   whileHover={{ x: 10 }}
@@ -177,7 +183,7 @@ const addValueCompany = [
                   client:only
                 >
                   <MapPin className="h-6 w-6 text-it4a-primary" />
-                  <span class=" text-2xl md:text-lg text-gray-100"
+                  <span class="text-2xl md:text-lg text-gray-100"
                     >Basé à Abidjan, Cocody</span
                   >
                 </motion.div>
@@ -189,19 +195,73 @@ const addValueCompany = [
                   viewport={{ once: true }}
                   client:only
                 >
-                  KONDRO NETWORKS est née de la volonté de démocratiser l’accès
-                  aux technologies IT de pointe sur le continent africain. Notre
-                  équipe réunit des ingénieurs passionnés et certifiés, cumulant
-                  plus de 10 ans d’expérience dans la conception, l’intégration,
-                  la sécurisation et l’optimisation de systèmes informatiques.
-                  Nous accompagnons les organisations à chaque étape de leur
-                  transformation numérique de la stratégie et du design à la
-                  mise en œuvre et au support continu,avec un engagement fort
-                  pour la performance, la sécurité et l’innovation. Notre
-                  ambition : devenir un acteur de référence en Afrique dans les
-                  domaines des réseaux, du cloud, de la cybersécurité et de la
-                  gestion de projets, en proposant des solutions sur mesure,
-                  durables et adaptées aux réalités locales.
+                  Fondée en 2022, KONDRO NETWORKS cumule déjà 3 années
+                  d’expérience concrète aux côtés de ses clients, avec une
+                  ambition claire : démocratiser l’accès aux technologies IT de
+                  pointe sur le continent africain.
+                </motion.p>
+                <motion.p
+                  className="md:text-lg text-gray-200 leading-relaxed"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.7 }}
+                  viewport={{ once: true }}
+                  client:only
+                >
+                  Notre force repose sur une équipe d’experts aguerris, capables
+                  d’intervenir sur les projets les plus complexes : DataCenter,
+                  Cloud, réseaux, communications unifiées, cybersécurité et
+                  développement d’applications.
+                </motion.p>
+                <motion.p
+                  className="md:text-lg text-gray-200 leading-relaxed"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true }}
+                  client:only
+                >
+                  Au cœur de notre valeur ajoutée :
+                </motion.p>
+                <motion.p
+                  className="md:text-lg  leading-relaxed"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 0.5 }}
+                  viewport={{ once: true }}
+                  client:only
+                >
+                  Des ingénieurs seniors disposant de 10 à 20 années
+                  d’expérience, qui ont bâti leur expertise auprès de
+                  constructeurs de renommée mondiale tels que Huawei, Nokia,
+                  Cisco, tout en s’ouvrant à un large éventail de technologies
+                  d’infrastructures (Cloud, serveurs, stockage, virtualisation,
+                  sécurité).
+                </motion.p>
+                <motion.p
+                  className="md:text-lg  leading-relaxed"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 0.4 }}
+                  viewport={{ once: true }}
+                  client:only
+                >
+                  Une vision à 360° alliant maîtrise technique et compréhension
+                  des enjeux métiers, pour transformer chaque projet IT en
+                  levier de performance et de compétitivité.
+                </motion.p>
+                <motion.p
+                  className="md:text-lg  leading-relaxed"
+                  initial={{ opacity: 0 }}
+                  whileInView={{ opacity: 1 }}
+                  transition={{ duration: 0.8, delay: 0.3 }}
+                  viewport={{ once: true }}
+                  client:only
+                >
+                  Une méthodologie éprouvée qui nous permet d’identifier le
+                  meilleur plan d’action face à vos défis business, et de livrer
+                  des solutions robustes, évolutives et parfaitement maîtrisées
+                  par vos équipes.
                 </motion.p>
                 <motion.p
                   className="md:text-lg  leading-relaxed"
@@ -211,9 +271,26 @@ const addValueCompany = [
                   viewport={{ once: true }}
                   client:only
                 >
-                  KONDRO NETWORKS, c’est l’alliance d’une expertise technique de haut niveau et d’une connaissance fine des enjeux business africains, pour transformer vos ambitions en réussites concrètes.
+                  Notre ambition est de devenir un acteur de référence en
+                  Afrique dans les domaines des réseaux, du cloud, de la
+                  cybersécurité et de la gestion de projets, en proposant des
+                  solutions sur mesure, durables et adaptées aux réalités
+                  locales.
                 </motion.p>
               </div>
+              <motion.p
+                className="md:text-lg  leading-relaxed"
+                initial={{ opacity: 0 }}
+                whileInView={{ opacity: 1 }}
+                transition={{ duration: 0.8, delay: 0.1 }}
+                viewport={{ once: true }}
+                client:only
+              >
+                Chez KONDRO NETWORKS, nous croyons que l’alliance d’une
+                expertise technique de haut niveau et d’une connaissance fine
+                des enjeux business africains est la clé pour transformer vos
+                ambitions en réussites concrètes.
+              </motion.p>
             </ScrollReveal>
           </div>
         </div>
@@ -251,15 +328,11 @@ const addValueCompany = [
                     <h2
                       class="block font-bold text-transparent bg-clip-text bg-gradient-to-r from-it4a-primary to-it4a-secondary text-xl md:text-3xl"
                     >
-                      Notre Mission
+                      Mission
                     </h2>
                   </div>
-                  <p class="text-gray-100  leading-relaxed">
-                    Aider les entreprises africaines à bénéficier de réseaux
-                    performants, sécurisés et parfaitement adaptés à leurs
-                    besoins spécifiques. Nous démocratisons l'accès aux
-                    technologies IT de pointe pour accélérer la croissance de
-                    nos clients.
+                  <p class="text-gray-100 leading-relaxed">
+                    Nous accompagnons nos clients dans toutes les étapes de leur transformation numérique — de la conception à l’implémentation, de l’audit au support continu — afin de leur offrir des infrastructures robustes, sécurisées et évolutives, parfaitement adaptées à leur
                   </p>
                 </CardContent>
               </Card>
@@ -287,15 +360,12 @@ const addValueCompany = [
                     <h2
                       class="block font-bold text-transparent bg-clip-text bg-gradient-to-r from-it4a-primary to-it4a-secondary text-xl md:text-3xl"
                     >
-                      Notre Vision
+                      Vision
                     </h2>
                   </div>
                   <p class="text-gray-100 leading-relaxed">
-                    Devenir un acteur clé de la transformation numérique en
-                    Afrique en proposant des solutions IT innovantes, fiables et
-                    accessibles. Nous voulons être le partenaire de référence
-                    pour toute entreprise souhaitant moderniser son
-                    infrastructure technologique.
+                   Devenir l’acteur de référence en Afrique pour les solutions IT et télécoms de nouvelle génération, en démocratisant l’accès aux technologies de pointe et en faisant du numérique un véritable levier de croissance et de compétitivité pour les entreprises et les institutions du continent.
+
                   </p>
                 </CardContent>
               </Card>
@@ -442,7 +512,7 @@ const addValueCompany = [
               addValueCompany.map((value, index) => (
                 <motion.div
                   key={index}
-                  className="text-center"
+                  className="text-center md:text-left"
                   initial={{ opacity: 0, y: 30 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: index * 0.2 }}

@@ -60,35 +60,43 @@ const Footer: React.FC<FooterProps> = ({
       title: "Services",
 
       links: [
-        {
-          label: "Conseil et stratégie IT",
-          href: "/services/conseil-strategie-it",
-        },
-        {
-          label: "Réseaux et cybersécurité",
-          href: "/services/reseaux-cybersecurite",
-        },
-        {
-          label: "Solutions cloud et hébergement",
-          href: "/services/cloud-hebergement",
-        },
-        {
-          label: "Développement et intégration",
-          href: "/services/developpement-integration",
-        },
-        {
-          label: "Support et maintenance IT",
-          href: "/services/support-maintenance",
-        },
-        {
-          label: "Étude & Ingénierie",
-          href: "/services/etude-ingenierie",
-        },
-        {
-          label: "Gestion de projets IT",
-          href: "/services/gestion-projets",
-        },
-      ]
+  {
+    label: "Tous les services",
+    href: "/services",
+  },
+  {
+    label: "Ingénierie / Design",
+    href: "/services/ingenierie-design",
+  },
+  {
+    label: "Implémentation",
+    href: "/services/implementation",
+  },
+  {
+    label: "Études",
+    href: "/services/etudes",
+  },
+  {
+    label: "Audit / AMOA",
+    href: "/services/audit-amoa",
+  },
+  {
+    label: "Gestion de Projets",
+    href: "/services/gestion-projets",
+  },
+  {
+    label: "Support et Exploitation",
+    href: "/services/support-exploitation",
+  },
+  {
+    label: "Formation IT",
+    href: "/services/formation-it",
+  },
+  {
+    label: "Développement d’applications",
+    href: "/services/developpement-applications",
+  },
+]
 
     },
     {

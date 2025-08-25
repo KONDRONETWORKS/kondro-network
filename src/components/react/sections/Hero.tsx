@@ -34,17 +34,19 @@ const Hero = () => {
       />
 
       <div className={`max-w-7xl grid lg:grid-cols-2 lg:gap-5 items-center relative z-10 `}>
-        <div >
+        <div className="space-y-3" >
           <div >
-            <h1 className=" text-4xl font-bold md:text-6xl  xxl:text-7xl text-white leading-tight">
+            <h1 className=" text-4xl font-bold md:text-5xl  xxl:text-7xl text-white leading-tight">
               <span className="block font-bold text-transparent bg-clip-text bg-gradient-to-r from-it4a-primary to-it4a-secondary">
                 <DecryptedText speed={70}   animateOn='view' text={`KONDRO`} />
               </span>
-              <DecryptedText  speed={70}   animateOn='view'  text={`NETWORKS`} />
+              <DecryptedText  speed={70}  animateOn='view'  text={`NETWORKS`} />
             </h1>
-            <p className="text-xs md:text-xl line-clamp-5 text-gray-300  leading-relaxed">
-              <DecryptedText speed={100} useOriginalCharsOnly={true}   animateOn='view'  text={`Boostez la performance de votre entreprise grâce à des solutions réseau sur mesure.Nous accompagnons les PME et grandes structures dans l’installation, la gestion et la sécurisation de leurs infrastructures informatiques.
-                `}
+            <p className="text-xs md:text-sm md:line-clamp-5 line-clamp-3  text-gray-300  leading-relaxed">
+              <DecryptedText speed={100} useOriginalCharsOnly={true}   animateOn='view'  text={`Accélérez la croissance et la compétitivité de votre entreprise grâce à notre expertise.
+
+Chez Kondro Networks, nous aidons les PME comme les grandes organisations à transformer leur système d’information en un véritable levier de performance.
+De l’architecture réseau à la cybersécurité, en passant par la gestion et l’optimisation des infrastructures, nous concevons et opérons des solutions fiables et évolutives, au service de vos enjeux métiers.`}
                  />
             </p>
           </div>
@@ -73,14 +75,14 @@ const Hero = () => {
             <div className="text-center">
               <div className="text-3xs md:text-3xl lg:text-4xl font-black text-it4a-primary">
                 {/* <CountUpAnimation end={100} suffix="+" /> */}
-                <CountUp  from={0} to={17} delay={1} duration={10}/>+
+                <CountUp  from={0} to={10} delay={1} duration={10}/>+
               </div>
               <p className="text-xs md:text-sm text-gray-400">clients satisfaits</p>
             </div>
             <div className="text-center">
               <div className="text-3xs md:text-3xl lg:text-4xl font-black text-it4a-primary">
                 {/* <CountUpAnimation end={400} suffix="+" /> */}
-                <CountUp  from={0} to={35} delay={1.5} duration={10}/>+ 
+                <CountUp  from={0} to={20} delay={1.5} duration={10}/>+ 
               </div>
               <p className="text-xs md:text-sm text-gray-400">projets réalisés</p>
             </div>

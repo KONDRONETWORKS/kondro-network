@@ -1,5 +1,5 @@
 import { cn } from "../../../lib/utils";
-import { Cloud, Code, Settings, Users, Shield, Search, FolderOpen ,ArrowUpRightFromCircleIcon} from 'lucide-react';
+import { Cloud, Code, Settings, Users, Shield, Search, FolderOpen ,ArrowUpRightFromCircleIcon,  BookOpen} from 'lucide-react';
 import TriangularBackground from "../UI/Animation/TriangularBackground";
 import TitleDescript from "../UI/components/TitleDescript";
 import TransitionSVGSection from "../UI/components/TransitionSVGSection";
@@ -18,43 +18,49 @@ interface ServicesProps {
 export const ServicesSection: React.FC<ServicesProps> = (
   { className }
 ) => {
-  const services = [
-    {
-      icon: <Settings className="w-8 h-8" />,
-      title: "Conseil et stratégie IT",
-      description: "Optimisation de votre infrastructure technologique pour une performance maximale.",
-    },
-    {
-      icon: <Shield className="w-8 h-8" />,
-      title: "Réseaux et cybersécurité",
-      description: "Protection avancée de vos données et systèmes contre les menaces numériques.",
-    },
-    {
-      icon: <Cloud className="w-8 h-8" />,
-      title: "Solutions cloud et hébergement",
-      description: "Migration et gestion cloud pour une infrastructure flexible et évolutive.",
-    },
-    {
-      icon: <Code className="w-8 h-8" />,
-      title: "Développement et intégration",
-      description: "Solutions logicielles sur mesure adaptées à vos besoins spécifiques.",
-    },
-    {
-      icon: <Users className="w-8 h-8" />,
-      title: "Support et maintenance IT",
-      description: "Assistance technique 24/7 pour garantir la continuité de vos opérations.",
-    },
-    {
-      icon: <Search className="w-8 h-8" />,
-      title: "Étude & Ingénierie",
-      description: "Analyse approfondie et conception technique pour des solutions innovantes et performantes.",
-    },
-    {
-      icon: <FolderOpen className="w-8 h-8" />,
-      title: "Gestion de projets IT",
-      description: "Pilotage et coordination de vos projets technologiques",
-    }
-  ];
+
+const services = [
+  {
+    icon: <Settings className="w-8 h-8" />,
+    title: "Ingénierie / Design",
+    description: "Conception d’architectures réseau et IT sur mesure, alignées sur vos enjeux métiers.",
+  },
+  {
+    icon: <Shield className="w-8 h-8" />,
+    title: "Implémentation",
+    description: "Déploiement rapide et sécurisé de vos solutions technologiques.",
+  },
+  {
+    icon: <Cloud className="w-8 h-8" />,
+    title: "Études",
+    description: "Analyses stratégiques pour optimiser vos choix IT et maximiser le ROI.",
+  },
+  {
+    icon: <Search className="w-8 h-8" />,
+    title: "Audit / AMOA",
+    description: "Évaluation indépendante et accompagnement pour vos projets de transformation numérique.",
+  },
+  {
+    icon: <FolderOpen className="w-8 h-8" />,
+    title: "Gestion de Projets",
+    description: "Pilotage rigoureux garantissant délais, coûts et résultats maîtrisés.",
+  },
+  {
+    icon: <Users className="w-8 h-8" />,
+    title: "Support et Exploitation",
+    description: "Supervision et maintenance proactive pour assurer continuité et performance.",
+  },
+  {
+    icon: <BookOpen className="w-8 h-8" />,
+    title: "Formation IT",
+    description: "Programmes adaptés pour renforcer durablement les compétences de vos équipes.",
+  },
+  {
+    icon: <Code className="w-8 h-8" />,
+    title: "Développement d’applications",
+    description: "Solutions logicielles sur mesure adaptées à vos besoins spécifiques.",
+  },
+];
   return (
     <TriangularBackground theme="dark" className="w-full h-full">
       <section id="services" className={` py-10 md:py-20 h-full w-full flex flex-col items-center backdrop-blur-xs px-2  md:px-4  bg-it4a-secondary/50 justify-center scroll-mt-px z-0 ${className} `}>

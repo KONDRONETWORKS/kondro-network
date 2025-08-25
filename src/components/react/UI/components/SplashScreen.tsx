@@ -110,7 +110,7 @@ const SplashScreen = ({ onComplete=true }:any) => {
           
           {/* Company Name */}
           <h1 className="text-2xl font-bold text-white mb-2 animate-pulse">
-            <span className="text-4xl text-it4a-primary">KONDRO</span><br/> NETWORK
+            <span className="text-4xl text-it4a-primary">KONDRO</span><br/>NETWORKS
           </h1>
         </div>
 
