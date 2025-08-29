@@ -4,7 +4,7 @@ import { Resend } from 'resend';
 
 const resend = new Resend(import.meta.env.RESEND_API_KEY);
 
-resend.domains.create({name:'itexperts4africa.com',customReturnPath:'outbound'});
+resend.domains.create({name:'kondronetworks.com',customReturnPath:'outbound'});
 
 export async function POST({ request }:any) {
   try {
@@ -42,7 +42,7 @@ export async function POST({ request }:any) {
     const emailBody = `
       <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
         <h2 style="color:#5dbbe9; border-bottom: 2px solid #5dbbe9; padding-bottom: 10px;">
-          NOUVEAU MESSAGE DE CONTACT - ITExperts4Africa
+          NOUVEAU MESSAGE DE CONTACT - Kondro-Networks
         </h2>
         
         <div style="background-color: #f8f9fa; padding: 20px; margin: 20px 0; border-radius: 8px;">
@@ -73,9 +73,9 @@ export async function POST({ request }:any) {
 
     // Envoi de l'email via Resend
     const { data, error } = await resend.emails.send({
-      from: 'ITExperts4Africa <onboarding@resend.dev>', // Remplacez par votre domaine vérifié
-      to: ['info@kondronetworks.com'], // Remplacez par votre vraie adresse
-      subject: `[ITExperts4Africa] Nouveau message de contact de ${name}`,
+      from: 'Kondro-Networks <onboarding@resend.dev>', // Remplacez par votre domaine vérifié
+      to: ['contact@itexperts4africa.com'], // Remplacez par votre vraie adresse
+      subject: `[Kondro-Networks] Nouveau message de contact de ${name}`,
       html: emailBody,
     });
 

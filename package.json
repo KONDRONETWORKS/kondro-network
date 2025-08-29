@@ -11,9 +11,9 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/node": "^9.4.3",
     "@astrojs/react": "^4.3.0",
     "@astrojs/sitemap": "^3.5.0",
-    "@astrojs/vercel": "^8.0.4",
     "@lucide/astro": "^0.525.0",
     "@radix-ui/react-slot": "^1.2.3",
     "@radix-ui/themes": "^3.2.1",

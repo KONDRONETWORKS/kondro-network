@@ -1,14 +1,13 @@
 // @ts-check
 import { defineConfig } from 'astro/config';
-import vercel from '@astrojs/vercel';
-import tailwindcss from "@tailwindcss/vite";
+import node from '@astrojs/node';
 import react from '@astrojs/react';
 import sitemap from '@astrojs/sitemap';
-
+import tailwindcss from '@tailwindcss/vite';
 // https://astro.build/config
 export default defineConfig({
     output:'server',
-    site:'https://it4acom.vercel.app/',
+    site:'https://kondronetworks.com',
     integrations:[react(),sitemap()],
       vite:{
         define:{
@@ -20,9 +19,10 @@ export default defineConfig({
             tailwindcss(),
         ],
     },
-    adapter: vercel({
-        webAnalytics: {
-        enabled: true,
-        },
-    }),
+    adapter: node(
+        {
+            mode: 'standalone',
+            experimentalStaticHeaders:true,
+        }
+    )
 });
